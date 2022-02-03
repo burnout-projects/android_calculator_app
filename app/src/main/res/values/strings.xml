@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="zero">0</string>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="point">.</string>
+    <string name="equals">=</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="multiply">*</string>
+    <string name="divide">/</string>
+    <string name="percentage">%</string>
+    <string name="plusminus">±</string>
+    <string name="braces">( )</string>
+    <string name="power">^</string>
+    <string name="allclear">C</string>
+    <string name="clear">bksp</string>
+    <string name="calculated_result">Calculated Result</string>
+    <string name="accessibility_backspace">Backspace</string>
+    <string name="accessibility_zero">Zero</string>
+    <string name="accessibility_dot">Dot</string>
+    <string name="accessibility_equals">Equals</string>
+    <string name="accessibility_one">One</string>
+    <string name="accessibility_two">Two</string>
+    <string name="accessibility_three">Three</string>
+    <string name="accessibility_four">Four</string>
+    <string name="accessibility_five">Five</string>
+    <string name="accessibility_six">Six</string>
+    <string name="accessibility_seven">Seven</string>
+    <string name="accessibility_eight">Eight</string>
+    <string name="accessibility_nine">Nine</string>
+    <string name="accessibility_plus">Add</string>
+    <string name="accessibility_minus">Subtract</string>
+    <string name="accessibility_multiply">Multiple</string>
+    <string name="accessibility_divide">Divide</string>
+    <string name="accessibility_allclear">All Clear</string>
+    <string name="accessibility_braces">Open Close Braces</string>
+    <string name="accessibility_power">Raised to the power of</string>
+</resources>

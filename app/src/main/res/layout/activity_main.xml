@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        android:outlineProvider="bounds"
+        android:background="@drawable/border"
+        android:gravity="bottom|end"
+        android:fontFamily="monospace"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@id/row_AC_percent_divide"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <LinearLayout
+        android:id="@+id/row_zero_equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/clear"
+            android:contentDescription="@string/accessibility_backspace"
+            app:icon="@drawable/ic_backspace"
+            app:layout_constraintStart_toStartOf="@+id/row_zero_equal"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/zero"
+            android:text="@string/zero"
+            android:contentDescription="@string/accessibility_zero"
+            app:layout_constraintStart_toEndOf="@+id/clear"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/point"
+            android:text="@string/point"
+            android:contentDescription="@string/accessibility_dot"
+            app:layout_constraintStart_toEndOf="@+id/zero"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/equals"
+            android:text="@string/equals"
+            android:contentDescription="@string/accessibility_equals"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <!--<com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/clear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/clear"
+            app:layout_constraintStart_toStartOf="@+id/row_zero_equal"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/zero"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/zero"
+            app:layout_constraintStart_toEndOf="@+id/clear"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/point"
+            app:layout_constraintStart_toEndOf="@+id/zero"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/equals"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/equals"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row_one_two_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/row_zero_equal"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/one"
+            android:text="@string/one"
+            android:contentDescription="@string/accessibility_one"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/two"
+            android:text="@string/two"
+            android:contentDescription="@string/accessibility_zero"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/three"
+            android:text="@string/three"
+            android:contentDescription="@string/accessibility_dot"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/plus"
+            android:text="@string/plus"
+            android:contentDescription="@string/accessibility_plus"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+        <!--<com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/one"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/two"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/three"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"/> -->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row_four_five_six"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/row_one_two_three"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/four"
+            android:text="@string/four"
+            android:contentDescription="@string/accessibility_four"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/five"
+            android:text="@string/five"
+            android:contentDescription="@string/accessibility_five"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/six"
+            android:text="@string/six"
+            android:contentDescription="@string/accessibility_six"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/minus"
+            android:text="@string/minus"
+            android:contentDescription="@string/accessibility_minus"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+        <!--<com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/four"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/four"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/five"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/five"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/six"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/six"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/minus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row_seven_eight_nine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/row_four_five_six"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/seven"
+            android:text="@string/seven"
+            android:contentDescription="@string/accessibility_seven"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/eight"
+            android:text="@string/eight"
+            android:contentDescription="@string/accessibility_eight"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/nine"
+            android:text="@string/nine"
+            android:contentDescription="@string/accessibility_nine"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/multiply"
+            android:text="@string/multiply"
+            android:contentDescription="@string/accessibility_multiply"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+        <!--<com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/seven"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/seven"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/eight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/eight"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/nine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/nine"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/multiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/multiply"/>-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/row_AC_percent_divide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/row_seven_eight_nine"
+        app:layout_constraintEnd_toEndOf="parent">
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/allclear"
+            android:text="@string/allclear"
+            android:contentDescription="@string/accessibility_allclear"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/braces"
+            android:text="@string/braces"
+            android:contentDescription="@string/accessibility_braces"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/power"
+            android:text="@string/power"
+            android:contentDescription="@string/accessibility_power"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/divide"
+            android:text="@string/divide"
+            android:contentDescription="@string/accessibility_divide"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.Button.Rounded" />
+        <!--<com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/allclear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/allclear" />
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/openbracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/openbracket"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/closebracket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/closebracket"/>
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.Calculator.MaterialButton"
+            android:id="@+id/divide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/divide"/>-->
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
